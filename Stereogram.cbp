@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Stereogram" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/Spec686" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+				<Linker>
+					<Add library="lib\libmingw32.a" />
+					<Add library="lib\libSDL2main.a" />
+					<Add library="lib\libSDL2.dll.a" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/Spec686" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add library="lib\libmingw32.a" />
+					<Add library="lib\libSDL2main.a" />
+					<Add library="lib\libSDL2.dll.a" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+			<Add option="-fopenmp" />
+			<Add directory="include" />
+		</Compiler>
+		<Linker>
+			<Add library="lib\libmingw32.a" />
+			<Add library="lib\libSDL2main.a" />
+			<Add library="lib\libSDL2.dll.a" />
+			<Add library="..\..\CodeBlocks\MinGW\lib\gcc\mingw32\5.1.0\libgomp.a" />
+			<Add directory="lib" />
+		</Linker>
+		<Unit filename="include/Color.h" />
+		<Unit filename="include/Mole.h" />
+		<Unit filename="include/monde.h" />
+		<Unit filename="sources/Color.cpp" />
+		<Unit filename="sources/Mole.cpp" />
+		<Unit filename="sources/Monde.cpp" />
+		<Unit filename="sources/main.cpp" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
