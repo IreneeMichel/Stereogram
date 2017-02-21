@@ -73,6 +73,7 @@ void crossProduct(float x[],float y[],float z[])
             }  ;
      } ;
      cout << "* end of maze creation\n" ;
+
      if (troup.size()>0) {cout <<" and it failed "<<endl; exit(0) ;} ;
 
     for (int i = 0; i < WIDTH; ++i)
@@ -82,16 +83,18 @@ void crossProduct(float x[],float y[],float z[])
 
      if (dungeon[2][3][3]) { cout <<"origin in bloc 3\n" ; exit(1) ;};
 
-      float ex[3] ;
-      ex[0]=0. ; ex[1]=0. ; ex[2]=0. ;
-       if (inbloc(ex)) { cout <<"origin in bloc \n" ; exit(1) ;} ;
-
      direction[0]= 0.6 ;
      direction[1]= -0.001 ;
      direction[2]= 0.4 ;
      up[0]=0. ;
      up[1]=0.9 ;
      up[2]=0.01 ;
+
+      float ex[3] ;
+      ex[0]=0. ; ex[1]=0. ; ex[2]=0. ;
+       if (inbloc(ex)) { cout <<"origin in bloc \n" ; exit(1) ;} ;
+
+
      crossProduct(direction,up,lateral) ;
 
      map=false ;

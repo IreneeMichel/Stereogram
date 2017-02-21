@@ -82,5 +82,5 @@ void Mole::changeDirection()
 Mole::~Mole() {
   //cout << " delete : " << this << " in "<< troup->size()  ;
  troup->erase(remove(troup->begin(), troup->end(), this), troup->end());
- cout << " " <<troup->size() << " moles"<< endl ;
+ //cout << " " <<troup->size() << " moles"<< endl ;
  }
